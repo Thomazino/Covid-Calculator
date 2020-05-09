@@ -8,7 +8,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class Infos extends AppCompatActivity {
-   private Button Question1,Question2,Question3,Question4,Question5,Question6;
+   private Button Question1,Question2,Question3,Question4,Question5,Question6,test,whot;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
