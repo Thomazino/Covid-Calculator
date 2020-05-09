@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Infos">
+
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:translationX="190dp"
+        android:translationY="245dp"
+        android:textSize="12dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/questionsbackground"
+        android:text="What is the source of the virus?" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/questionsbackground"
+        android:text="How does the virus spread?"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:translationX="190dp"
+        android:translationY="310dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/questionsbackground"
+        android:text="What temperature kills the virus that causes COVID19?"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:translationX="190dp"
+        android:translationY="375dp" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/questionsbackground"
+        android:text="How can I protect myself from the virus?"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:translationX="190dp"
+        android:translationY="440dp" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/questionsbackground"
+        android:text="Should I be tested for COVID-19?"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:translationX="190dp"
+        android:translationY="505dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="167dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/questionsbackground"
+        android:text="What I have to do if I'm sick from the virus?"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:translationX="190dp"
+        android:translationY="570dp" />
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationY="340dp"
+        android:translationX="-50dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:srcCompat="@drawable/scientist" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:translationX="65dp"
+        android:translationY="-65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/chatcloud" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="192dp"
+        android:layout_height="90dp"
+        android:scrollbarStyle="insideInset"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollview_thumb"
+        android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
+        android:translationX="170dp"
+        android:translationY="50dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:text="Hello there. I'm the smartest A.I.(kappa) chatbot in the universe.Feel free to ask me whatever questions you want from the following ones. My knowledge will save you from Coronavirus."
+            android:textSize="12dp"
+            android:translationX="13dp"
+            />
+
+    </ScrollView>
+
+</RelativeLayout>

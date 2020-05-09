@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Covid Stats</string>
+    <string name="Button1">Info and Advices</string>
+    <string name="Button2">Statistical Calculation</string>
+</resources>
