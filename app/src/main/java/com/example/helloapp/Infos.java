@@ -22,6 +22,7 @@ public class Infos extends AppCompatActivity {
                 TextView cloud=(TextView) findViewById(R.id.text1);
                 cloud.setText("COVID-19 is caused by a coronavirus called SARS-CoV-2. Coronaviruses are a large family of viruses that are common in people and may different species of animals, including camels, cattle, cats, and bats.  Rarely, animal coronaviruses can infect people and then spread between people. This occurred with MERS-CoV and SARS-CoV, and now with the virus that causes COVID-19. The SARS-CoV-2 virus is a betacoronavirus, like MERS-CoV and SARS-CoV. All three of these viruses have their origins in bats.However, the exact source of this virus is unknown.");
                 cloud.setLines(21);
+
             }
         });
 
