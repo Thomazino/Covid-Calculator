@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".explainingtouser">
+
+
+
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="80dp"
+        android:layout_height="25dp"
+        android:background="@drawable/buttonbackground"
+        android:text="Go"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
+        android:translationX="220dp"
+        android:translationY="137dp" />
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationY="340dp"
+        android:translationX="-50dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:srcCompat="@drawable/scientist" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:translationX="65dp"
+        android:translationY="-65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/chatcloud" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="192dp"
+        android:layout_height="90dp"
+        android:scrollbarStyle="insideInset"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollview_thumb"
+        android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
+        android:translationX="170dp"
+        android:translationY="50dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:text="You can give me some informations about you.Based on them I will calculate propabilities for you being ill from the virus. Press GO if you want to continue."
+            android:textSize="12dp"
+            android:translationX="13dp"
+            />
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

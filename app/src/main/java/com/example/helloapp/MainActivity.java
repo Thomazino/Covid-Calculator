@@ -7,21 +7,31 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-   private Button button;
+   private Button Info,StatCalc;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        button=(Button)findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        Info =(Button)findViewById(R.id.button);
+        Info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              GotoInfos();
+              GotoActivity(Infos.class);
             }
         });
+        StatCalc =(Button)findViewById(R.id.button2);
+        StatCalc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GotoActivity(explainingtouser.class);
+            }
+        });
+
     }
-    public void GotoInfos(){
-        Intent intent=new Intent(this,Infos.class);
+    public void GotoActivity(Class Activity){
+        Intent intent=new Intent(this,Activity);
         startActivity(intent);
     }
+
+
 }
