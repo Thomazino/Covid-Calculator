@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,4 +7,14 @@
     android:background="@drawable/background"
     tools:context=".Propabilities">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:translationY="150dp"
+        android:translationX="50dp"
+        android:background="#fff"
+        android:textColor="#000"
+        android:textSize="6dp"
+        android:text="TextView" />
+</RelativeLayout>
