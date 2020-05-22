@@ -7,14 +7,6 @@
     android:background="@drawable/background"
     tools:context=".Propabilities">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:translationY="150dp"
-        android:translationX="50dp"
-        android:background="#fff"
-        android:textColor="#000"
-        android:textSize="6dp"
-        android:text="TextView" />
+
+
 </RelativeLayout>
