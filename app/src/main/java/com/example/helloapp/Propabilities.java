@@ -43,7 +43,9 @@ public class Propabilities extends AppCompatActivity {
         String[] Countries=dt.getCountries();
         /**Επιστρεφει ολες τις χωρες που εχω στην βαση. Ειναι 177 και ο χρηστης πρεπει να διαλεξει μια απο αυτες
          * αναγκαστικα αρα στο interface θα χρησιμοποιηθει σιγουρα αυτη η συναρτηση ωστε να μπουν αυτες οι χωρες
-         * ως επιλογες*/
+         * ως επιλογες */
+        txt=(TextView)findViewById(R.id.textView);
+        txt.setText(""+Countries[1]+" MATHE NA BAZEIS TEXT RE MALAKA GAMOOOOOOOOOOOOOOOOoOoOoOo");
         dt.close();
     }
 }

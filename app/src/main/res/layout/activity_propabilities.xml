@@ -8,5 +8,13 @@
     tools:context=".Propabilities">
 
 
-
+    <TextView
+        android:id="@+id/textView"
+        android:background="#fff"
+        android:textColor="#000"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:translationX="50dp"
+        android:translationY="50dp"
+        android:text="TextView" />
 </RelativeLayout>
