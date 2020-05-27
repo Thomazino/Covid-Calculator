@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-   private Button Info,StatCalc;
+   private Button Info,StatCalc,Datas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 GotoActivity(explainingtouser.class);
+            }
+        });
+        Datas=(Button)findViewById(R.id.button10);
+        Datas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GotoActivity(Links.class);
             }
         });
 

@@ -33,7 +33,7 @@ public class Propabilities extends AppCompatActivity {
          * τους θανατους απο influenza και η 6η τους θανατους ειτε απο κορονοιο ειτε απο πνευμονια ειτε απο influenza.*/
         String[][] GeneralCases=dt.GeneralCasesData();
         /**Κανει τα ιδια με την CasesData απλα τα δεδομενα που επιστρεφει ειναι με βαση ολες τις ηλικιες και ολα τα φυλα.
-         * Ο πινακας παλι ειναι 54χ6 με ιδια ακριβως δομη.*/
+         * Ο πινακας παλι ειναι 54χ6 με ιδια ακριβως δομη .*/
         String[][] GeneralCasesOnSexes=dt.GeneralCasesOnSexesData("Male Total");
         /**Τα μονα ορισματα που δεχεται ειναι Male Total ή Female Total. Η λειτουργια ειναι ιδια με την Casesdata
          * με την διαφορα οτι τα δεδομενα που θα επιστραφουν ειναι συγκεκριμενα για το φυλο που θελουμε να παρουμε
@@ -43,7 +43,7 @@ public class Propabilities extends AppCompatActivity {
         String[] Countries=dt.getCountries();
         /**Επιστρεφει ολες τις χωρες που εχω στην βαση. Ειναι 177 και ο χρηστης πρεπει να διαλεξει μια απο αυτες
          * αναγκαστικα αρα στο interface θα χρησιμοποιηθει σιγουρα αυτη η συναρτηση ωστε να μπουν αυτες οι χωρες
-         * ως επιλογες */
+         * ως επιλογες   */
         txt=(TextView)findViewById(R.id.textView);
         txt.setText(""+Countries[1]+" MATHE NA BAZEIS TEXT RE MALAKA GAMOOOOOOOOOOOOOOOOoOoOoOo");
         dt.close();

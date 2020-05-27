@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Propabilities"></activity>
-        <activity android:name=".explainingtouser" />
+        <activity android:name=".Links" android:screenOrientation="portrait"  ></activity>
+        <activity android:name=".Propabilities" android:screenOrientation="portrait" />
+        <activity android:name=".explainingtouser" android:screenOrientation="portrait" />
         <activity
             android:name=".Infos"
             android:screenOrientation="portrait" />

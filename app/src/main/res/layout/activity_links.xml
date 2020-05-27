@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Links">
+
+
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:translationY="340dp"
+        android:translationX="-50dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:srcCompat="@drawable/scientist" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:translationX="65dp"
+        android:translationY="-65dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/chatcloud" />
+
+
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:translationX="89dp"
+        android:translationY="138dp"
+        android:scaleX="0.50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/table" />
+
+    <TextView
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:text="Links"
+        android:textSize="30dp"
+        android:translationX="238dp"
+        android:translationY="273dp"
+        />
+
+    <TextView
+        android:id="@+id/link1"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:text="@string/link1"
+        android:textSize="14dp"
+        android:clickable="true"
+        android:translationX="190dp"
+        android:translationY="320dp"
+        />
+
+    <TextView
+        android:id="@+id/link2"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:text="@string/link2"
+        android:textSize="14dp"
+        android:clickable="true"
+        android:translationX="190dp"
+        android:translationY="360dp"
+        />
+
+    <TextView
+        android:id="@+id/link3"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:text="@string/link3"
+        android:textSize="14dp"
+        android:clickable="true"
+        android:translationX="190dp"
+        android:translationY="405dp"
+        />
+
+    <TextView
+        android:id="@+id/link4"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:text="@string/link4"
+        android:textSize="14dp"
+        android:clickable="true"
+        android:translationX="190dp"
+        android:translationY="450dp"
+        />
+
+    <TextView
+        android:id="@+id/link5"
+        android:layout_width="165dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:text="@string/link5"
+        android:textSize="14dp"
+        android:clickable="true"
+        android:translationX="190dp"
+        android:translationY="495dp"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="192dp"
+        android:layout_height="90dp"
+        android:scrollbarStyle="insideInset"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollview_thumb"
+        android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
+        android:translationX="170dp"
+        android:translationY="50dp">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="165dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:text="If you are skeptical about my Covid-Stats research, you can tab and check the following links(first connect in wifi).This is where I took my data and did the math work. They are reliable sources. "
+            android:textSize="12dp"
+            android:translationX="13dp"
+            />
+
+    </ScrollView>
+
+</RelativeLayout>
+
+

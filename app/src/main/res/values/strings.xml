@@ -2,4 +2,24 @@
     <string name="app_name">Covid Stats</string>
     <string name="Button1">Info and Advices</string>
     <string name="Button2">Statistical Calculation</string>
+    <string name="link1">
+        <a href="https://www.worldometers.info/coronavirus/?zarsrc=130fbclid=IwAR3ufGXSfCzr4SRU8td_TQjfd-4luTEoLpvg3HzBedvjqbedIAzFRX6I5F0#countries">For Covid Cases tab here</a>
+    </string>
+
+    <string name="link2">
+        <a href="https://www.worldometers.info/geography/alphabetical-list-of-countries/?fbclid=IwAR26QFdkWcho_DWr421nTs1OUkgiplt8gcNziELrFm8sdwMQY4gJ5Him7RA">For Populations tab here</a>
+    </string>
+
+    <string name="link3">
+        <a href="https://en.wikipedia.org/wiki/List_of_countries_by_sex_ratio?fbclid=IwAR07X6lJaApiDgeLmtR7ddGpyVT9Lo1eqOzVl1dg50e0ALsZ0kutFsPtJL8">For Sex Ratios tab here</a>
+    </string>
+
+    <string name="link4">
+        <a href="https://www.worldometers.info/coronavirus/coronavirus-age-sex-demographics/?fbclid=IwAR0IWUPIp8Q-lTW8zn5NoeMT4emi3OQhFwzGKHc6qP0X6DA7Jkl8yt6uIoQ">For the Diseases tab here</a>
+    </string>
+
+    <string name="link5">
+        <a href="https://data.cdc.gov/NCHS/Provisional-COVID-19-Death-Counts-by-Sex-Age-and-S/9bhg-hcku?fbclid=IwAR1rRXhVzQKPoTpebGA-S2TRv9q3ZR5jRZfpjhesRffGPqTCGuGyhb_vGWg">For Death Counts tab here</a>
+    </string>
+
 </resources>
