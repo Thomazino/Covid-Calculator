@@ -14,16 +14,16 @@
         android:id="@+id/imageView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:translationY="340dp"
-        android:translationX="-50dp"
+        android:translationY="340sp"
+        android:translationX="-50sp"
         android:scaleX="1.5"
         android:scaleY="1.5"
         app:srcCompat="@drawable/scientist" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:translationX="65dp"
-        android:translationY="-65dp"
+        android:translationX="65sp"
+        android:translationY="-65sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/chatcloud" />
@@ -32,102 +32,102 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:translationX="89dp"
-        android:translationY="138dp"
-        android:scaleX="0.50"
+        android:translationX="89sp"
+        android:translationY="270sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:scaleX="0.5"
         app:srcCompat="@drawable/table" />
 
     <TextView
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
         android:textColor="#fff"
         android:text="Links"
-        android:textSize="30dp"
-        android:translationX="238dp"
-        android:translationY="273dp"
+        android:textSize="30sp"
+        android:translationX="238sp"
+        android:translationY="273sp"
         />
 
     <TextView
         android:id="@+id/link1"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
         android:textColor="#fff"
         android:text="@string/link1"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:clickable="true"
-        android:translationX="190dp"
-        android:translationY="320dp"
+        android:translationX="190sp"
+        android:translationY="320sp"
         />
 
     <TextView
         android:id="@+id/link2"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
         android:textColor="#fff"
         android:text="@string/link2"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:clickable="true"
-        android:translationX="190dp"
-        android:translationY="360dp"
+        android:translationX="190sp"
+        android:translationY="360sp"
         />
 
     <TextView
         android:id="@+id/link3"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
         android:textColor="#fff"
         android:text="@string/link3"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:clickable="true"
-        android:translationX="190dp"
-        android:translationY="405dp"
+        android:translationX="190sp"
+        android:translationY="405sp"
         />
 
     <TextView
         android:id="@+id/link4"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
         android:textColor="#fff"
         android:text="@string/link4"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:clickable="true"
-        android:translationX="190dp"
-        android:translationY="450dp"
+        android:translationX="190sp"
+        android:translationY="450sp"
         />
 
     <TextView
         android:id="@+id/link5"
-        android:layout_width="165dp"
-        android:layout_height="50dp"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
         android:textColor="#fff"
         android:text="@string/link5"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:clickable="true"
-        android:translationX="190dp"
-        android:translationY="495dp"
+        android:translationX="190sp"
+        android:translationY="495sp"
         />
 
     <ScrollView
         android:id="@+id/scrollView1"
-        android:layout_width="192dp"
-        android:layout_height="90dp"
+        android:layout_width="192sp"
+        android:layout_height="90sp"
         android:scrollbarStyle="insideInset"
         android:fadeScrollbars="false"
         android:scrollbarThumbVertical="@drawable/scrollview_thumb"
         android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
-        android:translationX="170dp"
-        android:translationY="50dp">
+        android:translationX="170sp"
+        android:translationY="50sp">
 
         <TextView
             android:id="@+id/text1"
-            android:layout_width="165dp"
-            android:layout_height="50dp"
+            android:layout_width="165sp"
+            android:layout_height="50sp"
             android:textColor="#000000"
             android:text="If you are skeptical about my Covid-Stats research, you can tab and check the following links(first connect in wifi).This is where I took my data and did the math work. They are reliable sources. "
-            android:textSize="12dp"
-            android:translationX="13dp"
+            android:textSize="12sp"
+            android:translationX="13sp"
             />
 
     </ScrollView>

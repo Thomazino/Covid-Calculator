@@ -49,9 +49,9 @@ public class DatabaseAccess {
     }
 
     public String getDeathRateDisease(String disease){
-       c=db.rawQuery("SELECT Death_Rate FROM Diseases WHERE PreExistingDiseases='"+disease+"'",new String[]{});
-       c.moveToNext();
-       return c.getString(0);
+        c=db.rawQuery("SELECT Death_Rate FROM Diseases WHERE PreExistingDiseases='"+disease+"'",new String[]{});
+        c.moveToNext();
+        return c.getString(0);
     }
 
     public String[][] CasesData(int Age,String Sex){
@@ -106,6 +106,7 @@ public class DatabaseAccess {
                     data="0";
                 Datas[j][i-2]=data;
                 j++;
+
             }
             c=db.rawQuery("SELECT * FROM CasesMeasurements WHERE Sex='All sexes'",new String[]{});
         }
@@ -114,7 +115,7 @@ public class DatabaseAccess {
 
     public String[][] GeneralCasesOnSexesData(String sex){
         String[][] Datas=new String[54][6];
-        c=db.rawQuery("SELECT * FROM CasesMeasurements WHERE Sex='"+sex+"'",new String[]{});
+        c=db.rawQuery("SELECT * FROM CasesMeasurements WHERE Sex='"+sex+" Total'",new String[]{});
         for(int i=2;i<=7;i++) {
             int j=0;
             while (c.moveToNext()) {
@@ -124,10 +125,11 @@ public class DatabaseAccess {
                 Datas[j][i-2]=data;
                 j++;
             }
-            c=db.rawQuery("SELECT * FROM CasesMeasurements WHERE Sex='"+sex+"'",new String[]{});
+            c=db.rawQuery("SELECT * FROM CasesMeasurements WHERE Sex='"+sex+" Total'",new String[]{});
         }
         return Datas;
     }
+
 
     public String[] getCountries(){
         String[] Countries=new String[177];
@@ -139,6 +141,20 @@ public class DatabaseAccess {
             i++;
         }
         return Countries;
+    }
+
+    public String getTotalCases(){
+        c = db.rawQuery("SELECT SUM(Total_Cases) FROM Countries",new String[]{});
+        c.moveToNext();
+        return c.getString(0);
+
+    }
+
+    public String getTotalDeaths(){
+        c = db.rawQuery("SELECT SUM(Total_Deaths)FROM Countries",new String[]{});
+        c.moveToNext();
+        return c.getString(0);
+
     }
 
 

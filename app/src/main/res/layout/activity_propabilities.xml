@@ -12,9 +12,9 @@
         android:id="@+id/textView"
         android:background="#fff"
         android:textColor="#000"
-        android:layout_width="250dp"
-        android:layout_height="200dp"
-        android:translationX="50dp"
-        android:translationY="50dp"
+        android:layout_width="250sp"
+        android:layout_height="400sp"
+        android:translationX="50sp"
+        android:translationY="50sp"
         android:text="TextView" />
 </RelativeLayout>
