@@ -329,4 +329,12 @@ public class Probabilities extends AppCompatActivity {
             return a*x;
         }
     }
+    @Override
+    public void onBackPressed(){
+        Intent intent=new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
+
+
+
 }

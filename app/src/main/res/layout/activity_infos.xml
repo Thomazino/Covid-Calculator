@@ -8,6 +8,8 @@
                 tools:context=".Info">
 
 
+
+
     <Button
             android:id="@+id/button3"
             android:layout_width="167sp"
@@ -133,5 +135,6 @@
         />
 
     </ScrollView>
+
 
 </RelativeLayout>
