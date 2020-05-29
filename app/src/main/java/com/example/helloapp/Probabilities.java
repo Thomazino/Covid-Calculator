@@ -25,9 +25,6 @@ public class Probabilities extends AppCompatActivity {
             userData[2]=null;
         String userSex= userData[0];
         int userAge = Integer.valueOf(userData[1]);
-
-        if(userData[2].equals("None"))
-            userData[2]=null;
         String userDisease = userData[2];
         String userCountry = userData[3];
 

@@ -149,20 +149,24 @@
             android:text="Enter your Country:" />
 
     <ImageView
+        android:scaleY="0.7"
+        android:scaleX="0.7"
         android:id="@+id/imageView"
         android:layout_width="30sp"
         android:layout_height="30sp"
         app:srcCompat="@android:drawable/arrow_down_float"
-        android:translationX="290sp"
+        android:translationX="295sp"
         android:translationY="265sp"
         />
 
     <ImageView
+        android:scaleY="0.7"
+        android:scaleX="0.7"
         android:id="@+id/imageView1"
         android:layout_width="30sp"
         android:layout_height="30sp"
         app:srcCompat="@android:drawable/arrow_down_float"
-        android:translationX="290sp"
+        android:translationX="295sp"
         android:translationY="365sp"
         />
 

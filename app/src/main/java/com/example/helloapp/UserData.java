@@ -25,6 +25,7 @@ public class UserData extends AppCompatActivity {
     private RadioButton rb;
     private int radioid;
     private EditText edit;
+    boolean Redwarning=false;
     Spinner Diseases,Countries;
     String[] dis={"None","Cardiovascular disease","Diabetes","Chronic respiratory disease","Hypertension","Cancer"};
     String[] cntrs;
@@ -98,8 +99,11 @@ public class UserData extends AppCompatActivity {
                     /** ΕΔΩ ΑΛΛΑΖΕΙΣ ACTIVITY ΚΑΙ ΣΤΕΛΝΕΙΣ ΤΟΝ ΠΙΝΑΚΑ UserDatas*/
                 }
                 else{
-                    txt=(TextView)findViewById(R.id.textView6);
-                    txt.setVisibility(View.VISIBLE);
+                    if(!Redwarning) {
+                        Redwarning=true;
+                        txt = (TextView) findViewById(R.id.textView6);
+                        txt.setVisibility(View.VISIBLE);
+                    }
                 }
             }
         });
