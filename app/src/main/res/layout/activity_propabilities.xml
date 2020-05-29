@@ -16,7 +16,7 @@
             android:textColorHighlight="@android:color/holo_blue_bright" android:visibility="visible"
             android:textColorHint="@android:color/background_light" android:textColor="@android:color/background_light"
             android:textSize="18sp" android:layout_centerHorizontal="true" android:textAlignment="center"
-            android:textStyle="normal|bold|italic"  android:fontFamily="@font/exo"/>
+            android:textStyle="normal|bold|italic"  android:fontFamily="@font/exo_2"/>
     <TextView
             android:text="TextView"
             android:layout_width="333dp"
