@@ -36,89 +36,91 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:translationX="89sp"
-        android:translationY="270sp"
+        android:translationX="90sp"
+        android:translationY="300sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleX="0.5"
-        app:srcCompat="@drawable/table" />
+        app:srcCompat="@drawable/table" ></ImageView>
 
     <TextView
-            android:layout_width="165sp"
-            android:layout_height="50sp"
-            android:textColor="@android:color/background_light"
-            android:text="Links"
-            android:fontFamily="@font/exo"
-            android:textStyle="normal|bold"
-            android:textSize="30sp"
-            android:translationX="238sp"
-            android:translationY="273sp"
-            android:visibility="visible"/>
+        android:layout_width="165sp"
+        android:layout_height="50sp"
+        android:textColor="@android:color/background_light"
+        android:text="Links"
+        android:fontFamily="@font/exo_2"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:translationX="238sp"
+        android:translationY="303sp"
+        android:visibility="visible"/>
 
     <TextView
-            android:id="@+id/link1"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="@font/exo"
-            android:text="@string/link1"
-            android:textSize="14sp"
-            android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="320sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+        android:id="@+id/link1"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="@font/exo_2"
+        android:text="@string/link1"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:translationX="190sp"
+        android:translationY="350sp"
+        android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
 
     <TextView
-            android:id="@+id/link2"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="@font/exo"
-            android:text="@string/link2"
-            android:textSize="14sp"
-            android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="360sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+        android:id="@+id/link2"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="@font/exo_2"
+        android:text="@string/link2"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:translationX="190sp"
+        android:translationY="390sp"
+        android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
 
     <TextView
-            android:id="@+id/link3"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="@font/exo"
-            android:text="@string/link3"
-            android:textSize="14sp"
-            android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="405sp"
-            android:visibility="visible"/>
+        android:id="@+id/link3"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="@font/exo_2"
+        android:text="@string/link3"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:translationX="190sp"
+        android:translationY="435sp"
+        android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
 
     <TextView
-            android:id="@+id/link4"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="@font/exo"
-            android:text="@string/link4"
-            android:textSize="14sp"
-            android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="450sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+        android:id="@+id/link4"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="@font/exo_2"
+        android:text="@string/link4"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:translationX="190sp"
+        android:translationY="480sp"
+        android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
 
     <TextView
-            android:id="@+id/link5"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
-            android:textColor="@android:color/background_light"
-            android:fontFamily="@font/exo"
-            android:text="@string/link5"
-            android:textSize="14sp"
-            android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="495sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+        android:id="@+id/link5"
+        android:layout_width="165sp"
+        android:layout_height="50sp"
+        android:textColor="@android:color/background_light"
+        android:fontFamily="@font/exo_2"
+        android:text="@string/link5"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:translationX="190sp"
+        android:translationY="525sp"
+        android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+
+
 
     <ScrollView
         android:id="@+id/scrollView1"
@@ -136,7 +138,7 @@
             android:layout_width="175sp"
             android:layout_height="80sp"
             android:textColor="#000000"
-            android:fontFamily="@font/exo"
+            android:fontFamily="@font/exo_2"
             android:textStyle="normal|bold"
             android:text="If you are skeptical about my Covid-Stats research, you can tab and check the following links(first connect to Wi-Fi).This is where I collected my data and did the math work. They are reliable sources. "
             android:textSize="14sp"
