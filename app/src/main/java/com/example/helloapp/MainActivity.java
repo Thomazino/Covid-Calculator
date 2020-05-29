@@ -16,14 +16,14 @@ public class MainActivity extends AppCompatActivity {
         Info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-              GotoActivity(Infos.class);
+              GotoActivity(com.example.helloapp.Info.class);
             }
         });
         StatCalc =(Button)findViewById(R.id.button2);
         StatCalc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GotoActivity(explainingtouser.class);
+                GotoActivity(Explaining.class);
             }
         });
         Datas=(Button)findViewById(R.id.button10);

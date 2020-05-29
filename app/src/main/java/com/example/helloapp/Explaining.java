@@ -6,17 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class explainingtouser extends AppCompatActivity {
+public class Explaining extends AppCompatActivity {
     private Button GO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_explainingtouser);
+        setContentView(R.layout.activity_explaining);
         GO=(Button)findViewById(R.id.button9);
         GO.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                GotoActivity(Propabilities.class);
+                GotoActivity(UserData.class);
             }
         });
     }

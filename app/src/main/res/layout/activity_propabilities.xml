@@ -1,20 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".Propabilities">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/darkbackground"
+                tools:context=".Probabilities">
 
 
     <TextView
-        android:id="@+id/textView"
-        android:background="#fff"
-        android:textColor="#000"
-        android:layout_width="250sp"
-        android:layout_height="400sp"
-        android:translationX="50sp"
-        android:translationY="50sp"
-        android:text="TextView" />
+            android:text="TextView"
+            android:layout_width="310dp"
+            android:layout_height="45dp" android:id="@+id/textView"
+            android:layout_alignParentTop="true" android:layout_marginTop="14dp"
+            android:textColorHighlight="@android:color/holo_blue_bright" android:visibility="visible"
+            android:textColorHint="@android:color/background_light" android:textColor="@android:color/background_light"
+            android:textSize="18sp" android:layout_centerHorizontal="true" android:textAlignment="center"
+            android:textStyle="normal|bold|italic"  android:fontFamily="@font/exo"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content" android:id="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:textSize="18sp"
+            android:visibility="visible" android:textStyle="normal|bold"
+            android:textColor="#f28ae4f1"
+            android:textAlignment="center"
+            android:background="@android:drawable/alert_dark_frame"
+            android:textColorHighlight="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" android:layout_below="@+id/textView"
+            android:fontFamily="@font/exo_2"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="309dp"
+            android:layout_height="wrap_content" android:id="@+id/textView3"
+            android:textColor="@android:color/background_light" android:textSize="16sp" android:visibility="visible"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true" android:layout_below="@+id/textView2"
+            android:layout_alignParentBottom="true" android:textStyle="normal|bold"
+            android:fontFamily="@font/exo_2"/>
 </RelativeLayout>

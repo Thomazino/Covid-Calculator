@@ -1,26 +1,30 @@
 package com.example.helloapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 
-public class Propabilities extends AppCompatActivity {
-    private TextView txt;
+public class Probabilities extends AppCompatActivity {
+   private TextView txt,txt2,txt3;
+   String[] userData;
     @Override
-    // Βάζετε τα 4 χαρακτηριστικά του χρήστη χώρα,φύλο,ηλικία, χρόνια νόσο (αν δεν έχει βάλτε null)
-    // Τα τελικά ποσοστά που δύναται να εκτυπωθούν είναι οι μεταβλητές που έχουν /* */ μπροστά.
-    //
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_propabilities);
         DatabaseAccess dt=DatabaseAccess.getInstance(getApplicationContext());
         dt.open();
-        String userCountry = "Greece";
-        String userSex= "Male";
-        String userDisease = "Cancer";
-        int userAge = 10;
+        Intent intent = getIntent();
+        Bundle args = intent.getBundleExtra("BUNDLE");
+        String[] userData = (String[]) args.getSerializable("STRING");
+        String userSex= userData[0];
+        int userAge = Integer.valueOf(userData[1]);
+        String userDisease = userData[2];
+        String userCountry = userData[3];
 
         /** Στο String countryInfo αποθηκέυουμε κάποια στοιχεία για την χώρα του χρήστη.
          * Στη πρώτη θέση είναι total cases, 2η total deaths, 3η total recovered, 4η active cases
@@ -138,6 +142,8 @@ public class Propabilities extends AppCompatActivity {
         }
 
         // Για κάθε μεταβλητή που πρέπει να διαφοροποιείται ανάλογα με την συγκεκριμένη ηλικία του χρήστη καλούμε την συνάρτηση getUserAgeData...
+        // Τα βάρη είναι πόσες φορές θα υπολογιστεί η ρίζα, δηλαδή όσο πιο πολύ τείνει να προσεγγίσει το 100% τόσο περισσότερο βάρος
+        // άρα τόσες φορές υπολογίζεται η ρίζα, άρα ποτέ δεν φτάνει στο 100.
         ageDeathRate=getUserAgeData(ageDeathRate,nextAgeDeathRate,userAge,(int)Math.ceil(ageDeathRate*diseaseDeathRate*60));
         ageCovidDeaths=(int)getUserAgeData((float)ageCovidDeaths,(float)nextAgeCovidDeaths,userAge,3);
         ageInfluenzaDeaths=(int)getUserAgeData((float)ageInfluenzaDeaths,(float)nextAgeInfluenzaDeaths,userAge,3);
@@ -148,51 +154,72 @@ public class Propabilities extends AppCompatActivity {
         String[] Countries=dt.getCountries();
 
         // Το ποσοστό επι τοις εκατό πιθανότητας ο χρήστης να πεθάνει αν πρσβληθεί απο κορωνοιό.
-        /* */float deathPercentage = getDeathProbability(countryDeathRate, worldDeathRate, ageDeathRate, sexDeathRatio, diseaseDeathRate);
+   /* */float deathPercentage = getDeathProbability(countryDeathRate, worldDeathRate, ageDeathRate, sexDeathRatio, diseaseDeathRate);
         // Το ποσοστό κάποιος που έχει πεθάνει απο κορωνοιό να κατέληξε λόγω της πνευμονίας.
-        /* */float pneumoniaBeforeDeath = getPneumoniaBeforeDeath(ageCovidDeaths,agePneumoniaDeaths);
+   /* */float pneumoniaBeforeDeath = getPneumoniaBeforeDeath(ageCovidDeaths,agePneumoniaDeaths);
         // Το ποσοστό επί τοις εκατό της πιθανότητας ο χρήστης που έχει προσβληθεί απο κορωνοιό να πεθάνει παθαίνοντας πνευμονία.
-        /* */float pneumoniaCovidPercentage = (deathPercentage*Math.round(pneumoniaBeforeDeath))/100;
+   /* */float pneumoniaCovidPercentage = (deathPercentage*Math.round(pneumoniaBeforeDeath))/100;
 
         /* Το ποσοστό επί τοις εκατό κάποιος με το φύλο του χρήστη να έχει κορωνοιό.
-         * Προφανώς η πιθανότητα δεν αφορά τον εκάστοτε άνθρωπο γιατί επηρεάζουν παράγοντες που δεν απεικονίζονται με δεμένα
-         * καθώς κρίνεται κυρίως από τύχη και από την πιθανότητα να συναναστραφεί με ήδη κρούσμα και να προσβληθεί.
-         * Για αυτό το ποσοστό αυτό δείχνει μόνο τα active cases / τον πληθυσμό της χώρας με βάση το φύλο.
-         * Δηλαδή τα παρακάτω ποσοστά μπορούν να χαρακτηριστούν ως εξής:  */
+        * Προφανώς η πιθανότητα δεν αφορά τον εκάστοτε άνθρωπο γιατί επηρεάζουν παράγοντες που δεν απεικονίζονται με δεμένα
+        * καθώς κρίνεται κυρίως από τύχη και από την πιθανότητα να συναναστραφεί με ήδη κρούσμα και να προσβληθεί.
+        * Για αυτό το ποσοστό αυτό δείχνει μόνο τα active cases / τον πληθυσμό της χώρας με βάση το φύλο.
+        * Δηλαδή τα παρακάτω ποσοστά μπορούν να χαρακτηριστούν ως εξής:  */
 
         // πχ. ποια η πιθανότητα μια ελληνίδα να έχει τώρα κορωνοιό
-        /* */float activePercentage = getInfectionProbability(countryActiveCases,countryPopulation,countrySexRatio)*100;
+   /* */float activePercentage = getInfectionProbability(countryActiveCases,countryPopulation,countrySexRatio)*100;
         // πχ. ποια η πιθανότητα ενας νορβηγός να έχει περάσει κορωνοιό.
-        /* */float recoveredPercentage = getInfectionProbability(countryRecoveredCases,countryPopulation,countrySexRatio)*100;
+   /* */float recoveredPercentage = getInfectionProbability(countryRecoveredCases,countryPopulation,countrySexRatio)*100;
         // πχ. ποια η πιθανότητα μια φιλιππινέζα να έχει ψοφίσει απο κορωνοιό.
-        /* */float infectedPercentage = getInfectionProbability(countryTotalCases,countryPopulation,countrySexRatio)*100;
+   /* */float infectedPercentage = getInfectionProbability(countryTotalCases,countryPopulation,countrySexRatio)*100;
 
 
         /*  Παρακάτω υπολογίζει την πιθανότητα ο θάνατος κάποιου χωρίς να ξέρουμε κανένα στοιχείο για αυτόν πέρα από την ηλικία του, να οφείλεται σε κορωνοιό.
          *  Δηλαφή το πηλίκο των θανάτων από κορωνοιό στο διάστημα της ηλικίας του δια τον αριθμό όλων των θανάτων στην ηλικία αυτή
          *  από την στιγμή που άρχισε ο κορωνοιός προσαρμοσμένο για κάθε χώρα. */
-        float countryCovidRate=(float)countryTotalDeaths/countryPopulation;
+        float countryCovidRate=(float)countryTotalDeaths/(float)countryPopulation;
         // Επειδή τα δεοδμένα που έχουμε είναι από ΗΠΑ πρέπει να συγκριθεί με την χώρα του χρήστη.
         String[] USAInfo=dt.getInfoForCountry("USA");
         // Ένα ενδεικτικό νούμερο που απεικονίζει το πόσο διαδεμονένος είναι ο κορωνοιός στις ΗΠΑ βάσει θανάτων/πληθυσμό.
-        float USACovidRate=(float)Integer.valueOf(USAInfo[1])/Integer.valueOf(USAInfo[6]);
+        float USACovidRate=(float)Integer.valueOf(USAInfo[1])/(float)Integer.valueOf(USAInfo[6]);
         // Ένας αριθμός που δείχνει πόσο λιγότερο η περισσότερο διαδεδομένος είναι ο κορωνοιός στην χώρα σε σχέση με την χώρα των δεδομένων ΗΠΑ.
         float countryRelativeToData=countryCovidRate/USACovidRate;
         // Η πιθανότητα ο θάνατος κάποιου με τα χαρακτηριστικά του χρήστη να οφείλεται στον κορωνοιό.
-        /* */float deathFromCovid = getDeathFromCovidProbability(ageCovidDeaths,ageDeaths,countryRelativeToData);
-        /* */float covidVSinfluenza = getCovidVSInfluenza(ageCovidDeaths,ageInfluenzaDeaths,countryRelativeToData);
+   /* */float deathFromCovid = getDeathFromCovidProbability(ageCovidDeaths,ageDeaths,countryRelativeToData);
+   /* */float covidVSinfluenza = getCovidVSInfluenza(ageCovidDeaths,ageInfluenzaDeaths,countryRelativeToData);
 
         txt=(TextView)findViewById(R.id.textView);
-        txt.setText("So you are a "+userAge+" year old "+userSex+" malamatinan from "+userCountry+" with "+userDisease+".\n\n+"+
-                "It's "+(deathPercentage)+"% possible you die if you get infected with Covid-19.\n\n" +
-                "It's"+pneumoniaCovidPercentage+"-"+(pneumoniaCovidPercentage+1)+"% possible you die from pneumonia because of Covid-19.\n\n"
-                +"The "+infectedPercentage+" % of "+userSex+"s from "+userCountry+" has been infected with Covid-19 until now.\n\n"+
-                "The "+activePercentage+" % of "+userSex+"s from "+userCountry+" are now dealing with Covid-19.\n\n"+
-                "The "+recoveredPercentage+" % of "+userSex+"s from "+userCountry+" has now recovered from Covid-19.\n\n"
-                + "Probability Covid-19 is the reason of death of a random "+userAge+" year old "+userSex+" from "+userCountry+" is "+deathFromCovid+"%.\n\n"
-                + "Probability a random "+userAge+" year old "+userSex+" before their death from Covid-19 develops pneumonia is "+pneumoniaBeforeDeath+"%\n\n"
-                + "It's "+covidVSinfluenza+" times more likable for a random "+userAge+" year old "+userSex+" from "+userCountry+" with "+userDisease+ " to" +
-                " die from Covid-19 than Influenza");
+        String text1 = "So you are a "+userAge+" year old "+userSex+" from "+userCountry;
+        if (userDisease!=null) text1+=(" with "+userDisease);
+        else text1+=(" without a chronic disease");
+        text1+=(".");
+        txt.setText(text1);
+
+
+        txt2=(TextView)findViewById(R.id.textView2);
+        DecimalFormat df = new DecimalFormat();
+        int decimal=0;
+        if (deathPercentage<10) {
+            df.setMaximumFractionDigits(2);
+            decimal=2;
+        }
+        else df.setMaximumFractionDigits(0);
+        txt2.setText("The probability you pass away if you get infected with Covid-19 is  "+df.format(deathPercentage)+"-"+df.format(deathPercentage+1/Math.pow(10,decimal))+"%.");
+        txt3=(TextView)findViewById(R.id.textView3);
+        DecimalFormat df2 = new DecimalFormat();
+        df2.setMaximumFractionDigits(3);
+        String text2 ="It is "+df.format(pneumoniaCovidPercentage)+"-"+df.format(pneumoniaCovidPercentage+1/Math.pow(10,decimal))+"% possible you pass away from pneumonia caused by the virus.\n\n"
+        +"The "+df2.format(infectedPercentage)+" % of "+userSex+"s from "+userCountry+" have been infected with Covid-19 some time until now.\n\n"+
+                "The "+df2.format(activePercentage)+" % of "+userSex+"s from "+userCountry+" are now dealing with Covid-19.\n\n"+
+                "The "+df2.format(recoveredPercentage)+" % of "+userSex+"s from "+userCountry+" have now recovered from Covid-19.\n\n"
+        + "Probability the death of a random "+userAge+" year old "+userSex+" from "+userCountry+" is caused by Covid-19 is around "+df2.format(+deathFromCovid)+"%.\n\n"
+        + "Probability a random "+userAge+" year old "+userSex+" develops pneumonia before their death from Covid-19 is around "+df2.format(+pneumoniaBeforeDeath)+"%\n\n"
+        + "The cause of death of a random "+userAge+" year old "+userSex+" from "+userCountry+" is ";
+        if ((1/covidVSinfluenza)>1.5) text2+=Math.round(1/covidVSinfluenza)+" times more possible to be the common flu than the coronavirus.";
+        else if (covidVSinfluenza>1.5) text2+=(int)(covidVSinfluenza+0.5)+ " times more possible to be Covid-19 than the common flu.";
+        else text2+=" equally probable to be Covid-19 or the common flu. ";
+
+        txt3.setText(text2);
         dt.close();
 
     }

@@ -1,55 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background"
-    tools:context=".MainActivity">
-
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@drawable/darkbackground"
+                                             tools:context=".MainActivity">
 
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="175sp"
-        android:layout_height="76sp"
-        android:background="@drawable/buttonbackground"
-        android:text="@string/Button2"
-        android:textAllCaps="false"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+            android:id="@+id/button2"
+            android:layout_width="175dp"
+            android:layout_height="76dp"
+            android:background="@drawable/buttonbackground"
+            android:fontFamily="@font/exo"
+            android:textStyle="normal|bold"
+            android:text="@string/Button2"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.45"/>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="175sp"
-        android:layout_height="76sp"
-        android:background="@drawable/buttonbackground"
-        android:text="@string/Button1"
-        android:textAllCaps="false"
-        android:textColor="#ffffff"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245" />
+            android:id="@+id/button"
+            android:layout_width="175dp"
+            android:layout_height="76dp"
+            android:background="@drawable/buttonbackground"
+            android:fontFamily="@font/exo"
+            android:textStyle="normal|bold"
+            android:text="@string/Button1"
+            android:textAllCaps="false"
+            android:textColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.25"/>
 
     <Button
         android:id="@+id/button10"
         android:layout_width="175sp"
         android:layout_height="76sp"
         android:background="@drawable/buttonbackground"
-        android:text="Our Datas and Sources"
+        android:fontFamily="@font/exo"
+        android:textStyle="normal|bold"
+        android:text="Our Data and Sources"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.685" />
+        app:layout_constraintVertical_bias="0.65" />
 
 
 </android.support.constraint.ConstraintLayout>
