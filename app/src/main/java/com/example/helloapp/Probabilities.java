@@ -21,6 +21,8 @@ public class Probabilities extends AppCompatActivity {
         Intent intent = getIntent();
         Bundle args = intent.getBundleExtra("BUNDLE");
         String[] userData = (String[]) args.getSerializable("STRING");
+        if(userData[2].equals("None"))
+            userData[2]=null;
         String userSex= userData[0];
         int userAge = Integer.valueOf(userData[1]);
         String userDisease = userData[2];
