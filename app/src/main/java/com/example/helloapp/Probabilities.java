@@ -23,6 +23,9 @@ public class Probabilities extends AppCompatActivity {
         String[] userData = (String[]) args.getSerializable("STRING");
         String userSex= userData[0];
         int userAge = Integer.valueOf(userData[1]);
+
+        if(userData[2].equals("None"))
+            userData[2]=null;
         String userDisease = userData[2];
         String userCountry = userData[3];
 
@@ -218,7 +221,6 @@ public class Probabilities extends AppCompatActivity {
         if ((1/covidVSinfluenza)>1.5) text2+=Math.round(1/covidVSinfluenza)+" times more possible to be the common flu than the coronavirus.";
         else if (covidVSinfluenza>1.5) text2+=(int)(covidVSinfluenza+0.5)+ " times more possible to be Covid-19 than the common flu.";
         else text2+=" equally probable to be Covid-19 or the common flu. ";
-
         txt3.setText(text2);
         dt.close();
 

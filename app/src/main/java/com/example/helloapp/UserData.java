@@ -93,8 +93,6 @@ public class UserData extends AppCompatActivity {
                 else
                     UserDatas[0]="-1";
                 if(Start(UserDatas)) {
-                    if(UserDatas[0].equals("None"))
-                        UserDatas[0]=null;
 
                     GotoActivity(Probabilities.class,UserDatas);
                     /** ΕΔΩ ΑΛΛΑΖΕΙΣ ACTIVITY ΚΑΙ ΣΤΕΛΝΕΙΣ ΤΟΝ ΠΙΝΑΚΑ UserDatas*/
