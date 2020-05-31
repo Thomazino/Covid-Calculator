@@ -82,6 +82,12 @@ public class UserData extends AppCompatActivity {
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(NotInteger(""+edit.getText()) || Integer.parseInt(""+edit.getText())>120) {
+                    edit.setText("");
+                    UserDatas[1]="-1";
+                }
+                else
+                    UserDatas[1]=""+edit.getText();
                 radioid=rg.getCheckedRadioButtonId();
                 if (radioid!=-1) {
                     rb = (RadioButton) findViewById(radioid);
