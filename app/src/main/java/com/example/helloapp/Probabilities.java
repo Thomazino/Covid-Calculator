@@ -3,6 +3,8 @@ package com.example.helloapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -10,13 +12,21 @@ import java.math.BigDecimal;
 import java.text.DecimalFormat;
 
 public class Probabilities extends AppCompatActivity {
-   private TextView txt,txt2,txt3;
-   String[] userData;
+    private Button Home;
+    private TextView txt,txt2,txt3;
+    private String[] userData;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_propabilities);
         DatabaseAccess dt=DatabaseAccess.getInstance(getApplicationContext());
+        Home =(Button)findViewById(R.id.button12);
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                GotoActivity(MainActivity.class);
+            }
+        });
         dt.open();
         Intent intent = getIntent();
         Bundle args = intent.getBundleExtra("BUNDLE");
@@ -326,11 +336,12 @@ public class Probabilities extends AppCompatActivity {
             return a*x;
         }
     }
-    @Override
-    public void onBackPressed(){
-        Intent intent=new Intent(this,MainActivity.class);
+
+    public void GotoActivity(Class Activity){
+        Intent intent=new Intent(this,Activity);
         startActivity(intent);
     }
+
 
 
 

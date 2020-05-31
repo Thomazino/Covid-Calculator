@@ -16,40 +16,36 @@ import android.widget.TextView;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 
 public class UserData extends AppCompatActivity {
     private TextView txt;
     private Button Start;
-    private String[] UserDatas={"-1","-1","-1","-1"};
+    private String[] UserDatas={"-1","-1","-1"};
     private RadioGroup rg;
     private RadioButton rb;
+    private String[] SendedDiseases;
     private int radioid;
     private EditText edit;
     boolean Redwarning=false;
-    Spinner Diseases,Countries;
-    String[] dis={"None","Cardiovascular disease","Diabetes","Chronic respiratory disease","Hypertension","Cancer"};
+    Spinner Countries;
+    MultiSelectionSpinner Diseases;
+    String[] dis={"Cardiovascular disease","Diabetes","Chronic respiratory disease","Hypertension","Cancer"};
     String[] cntrs;
-    ArrayAdapter<String> ad1,ad2;
+    ArrayAdapter<String> ad2;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_data);
         DatabaseAccess dt=DatabaseAccess.getInstance(getApplicationContext());
-        Diseases=(Spinner)findViewById(R.id.spinner);
-        rg=(RadioGroup)findViewById(R.id.rd);
-        ad1=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,dis);
-        Diseases.setAdapter(ad1);
-        Diseases.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                UserDatas[2]=dis[position];
-            }
+        ArrayList<Item> items = new ArrayList<>();
+        for(int i=0;i<dis.length;i++)
+            items.add(new Item(dis[i],i));
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                UserDatas[2]="-1";
-            }
-        });
+        Diseases=(MultiSelectionSpinner) findViewById(R.id.spinner);
+        Diseases.setItems(items);
+        rg=(RadioGroup)findViewById(R.id.rd);
+
         dt.open();
         Countries=(Spinner)findViewById(R.id.spinner1);
         cntrs=dt.getCountries();
@@ -58,12 +54,12 @@ public class UserData extends AppCompatActivity {
         Countries.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                UserDatas[3]=cntrs[position];
+                UserDatas[2]=cntrs[position];
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                UserDatas[3]="1";
+                UserDatas[2]="-1";
             }
         });
         edit=(EditText)findViewById(R.id.editText);
@@ -93,10 +89,25 @@ public class UserData extends AppCompatActivity {
                 }
                 else
                     UserDatas[0]="-1";
-                if(Start(UserDatas)) {
+                if(Diseases.getSelectedItems().size()>0){
+                    SendedDiseases=new String[Diseases.getSelectedItems().size()];
+                    for(int i=0;i<Diseases.getSelectedItems().size();i++)
+                        SendedDiseases[i]=Diseases.getSelectedItems().get(i).getName();
 
+                }
+                else{
+                    SendedDiseases=new String[1];
+                    SendedDiseases[0]="None";
+                }
+                if(Start(UserDatas)) {
+                    if(Redwarning){
+                        Redwarning=false;
+                        txt = (TextView) findViewById(R.id.textView6);
+                        txt.setVisibility(View.INVISIBLE);
+                    }
                     GotoActivity(Probabilities.class,UserDatas);
-                    /** ΕΔΩ ΑΛΛΑΖΕΙΣ ACTIVITY ΚΑΙ ΣΤΕΛΝΕΙΣ ΤΟΝ ΠΙΝΑΚΑ UserDatas*/
+                    /** ΕΔΩ ΑΛΛΑΖΕΙΣ ACTIVITY ΚΑΙ ΣΤΕΛΝΕΙΣ ΤΟΝ ΠΙΝΑΚΑ UserDatas
+                     * ΚΑΙ ΣΤΕΛΝΕΙΣ ΚΑΙ ΤΟ SendedDiseases*/
                 }
                 else{
                     if(!Redwarning) {

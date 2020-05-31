@@ -12,8 +12,8 @@
             android:id="@+id/button11"
             android:layout_width="250sp"
             android:layout_height="150sp"
-            android:translationY="450sp"
-            android:translationX="80sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="450sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
             android:background="@drawable/questionsbackground"
@@ -21,19 +21,20 @@
             android:textSize="30sp"
             android:textAlignment="center"/>
 
-    <Spinner
+    <com.example.helloapp.MultiSelectionSpinner
+            android:popupBackground="#000"
             android:background="@drawable/questionsbackground"
             android:id="@+id/spinner"
-            android:translationX="80sp"
-            android:translationY="255sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="255sp"
             android:layout_width="250sp"
             android:layout_height="50sp"/>
 
     <Spinner
             android:background="@drawable/questionsbackground"
             android:id="@+id/spinner1"
-            android:translationY="355sp"
-            android:translationX="80sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="355sp"
             android:layout_width="250sp"
 
             android:layout_height="50sp" />
@@ -42,6 +43,7 @@
 
     <EditText
             android:id="@+id/editText"
+            android:layout_centerHorizontal="true"
             android:layout_width="100sp"
             android:layout_height="30sp"
             android:ems="10"
@@ -49,9 +51,8 @@
             android:maxLength="3"
             android:maxEms="5"
             android:hint="ex. 25"
-            android:translationX="140sp"
             android:background="@drawable/questionsbackground"
-            android:translationY="160sp"
+            android:layout_marginTop="180sp"
             android:gravity="start|top"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
@@ -59,9 +60,9 @@
 
     <RadioGroup
             android:id="@+id/rd"
-            android:translationY="10sp"
-            android:translationX="150sp"
-            android:layout_width="200sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30sp"
+            android:layout_width="130sp"
             android:layout_height="120sp">
 
         <RadioButton
@@ -81,7 +82,7 @@
                 android:textColor="#fff"
                 android:layout_width="100sp"
                 android:layout_height="40sp"
-                android:translationY="-30sp"
+                android:layout_marginTop="-30sp"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:fontFamily="@font/exo_2"
@@ -90,35 +91,36 @@
 
     <TextView
             android:id="@+id/textView2"
+            android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="100sp"
             android:textSize="20sp"
             android:textColor="#fff"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2" android:visibility="visible"
-            android:text="Enter your sex:" android:textAlignment="center" android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true" android:layout_marginTop="11dp"/>
+            android:text="Enter your sex:" android:textAlignment="center"
+            android:layout_marginTop="31dp"/>
 
     <TextView
             android:id="@+id/textView3"
-            android:layout_width="300sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
             android:layout_height="100sp"
             android:textSize="20sp"
             android:textColor="#fff"
-            android:translationX="55sp"
-            android:translationY="120sp"
+            android:layout_marginTop="140sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
             android:text="Enter your age (0-120):" android:visibility="visible" android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/textView4"
-            android:layout_width="250sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
             android:layout_height="100sp"
             android:textSize="20sp"
             android:textColor="#fff"
-            android:translationX="75sp"
-            android:translationY="200sp"
+            android:layout_marginTop="220sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2" android:visibility="visible"
             android:text="Enter your chronic disease:" android:textAlignment="center"/>
@@ -126,48 +128,55 @@
     <TextView
             android:visibility="invisible"
             android:id="@+id/textView6"
-            android:layout_width="250sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
             android:layout_height="100sp"
             android:textSize="14sp"
             android:textColor="#de2020"
-            android:translationX="105sp"
-            android:translationY="430sp"
+            android:textAlignment="center"
+            android:layout_marginTop="430sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
             android:text="*PLEASE fill out EVERYTHING correct*" />
 
+
+
+
     <TextView
             android:id="@+id/textView5"
-            android:layout_width="250sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
             android:layout_height="100sp"
             android:textSize="20sp"
             android:textColor="#fff"
-            android:translationX="115sp"
-            android:translationY="325sp"
+            android:layout_marginTop="325sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2" android:visibility="visible"
             android:text="Enter your Country:" />
 
     <ImageView
-        android:scaleY="0.7"
-        android:scaleX="0.7"
+        android:scaleY="0.4"
+        android:scaleX="0.4"
         android:id="@+id/imageView"
-        android:layout_width="30sp"
+        android:layout_width="match_parent"
         android:layout_height="30sp"
         app:srcCompat="@android:drawable/arrow_down_float"
-        android:translationX="295sp"
-        android:translationY="265sp"
+        android:layout_marginLeft="215sp"
+        android:layout_marginTop="265sp"
+
         />
 
     <ImageView
-        android:scaleY="0.7"
-        android:scaleX="0.7"
+        android:scaleY="0.4"
+        android:scaleX="0.4"
         android:id="@+id/imageView1"
-        android:layout_width="30sp"
+        android:layout_width="match_parent"
         android:layout_height="30sp"
         app:srcCompat="@android:drawable/arrow_down_float"
-        android:translationX="295sp"
-        android:translationY="365sp"
+        android:layout_marginLeft="215sp"
+        android:layout_marginTop="365sp"
+
         />
 
 </RelativeLayout>

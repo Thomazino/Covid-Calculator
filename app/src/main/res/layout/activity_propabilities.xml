@@ -7,6 +7,17 @@
                 android:background="@drawable/darkbackground"
                 tools:context=".Probabilities">
 
+    <Button
+        android:id="@+id/button12"
+        android:background="@drawable/buttonbackground"
+        android:layout_marginTop="635sp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="150sp"
+        android:layout_height="80sp"
+        android:text="Home"
+
+        />
+
     <TextView
             android:text="TextView"
             android:layout_width="310dp"
