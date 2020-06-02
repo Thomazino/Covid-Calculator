@@ -48,10 +48,16 @@ public class DatabaseAccess {
         return Infos;
     }
 
-    public String getDeathRateDisease(String disease){
-        c=db.rawQuery("SELECT Death_Rate FROM Diseases WHERE PreExistingDiseases='"+disease+"'",new String[]{});
-        c.moveToNext();
-        return c.getString(0);
+    public float getDeathRateDisease(String[] diseases,float userAge){
+        float userDiseaseDeathRate=0;
+        for (int i=0;i<diseases.length;i++) {
+            c = db.rawQuery("SELECT Death_Rate FROM Diseases WHERE PreExistingDiseases='" + diseases[0] + "'", new String[]{});
+            c.moveToNext();
+            userDiseaseDeathRate+=Float.valueOf(c.getString(0))/(i+1);
+
+
+        }
+        return userDiseaseDeathRate;
     }
 
     public String[][] CasesData(int Age,String Sex){

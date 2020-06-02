@@ -47,7 +47,7 @@
         android:background="@drawable/buttonbackground"
         android:fontFamily="@font/exo_2"
         android:textStyle="normal|bold"
-        android:text="Our Data and Sources"
+        android:text="Data and Sources"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"

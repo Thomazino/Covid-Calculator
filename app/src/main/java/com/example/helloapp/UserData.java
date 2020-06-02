@@ -21,10 +21,10 @@ import java.util.ArrayList;
 public class UserData extends AppCompatActivity {
     private TextView txt;
     private Button Start;
-    private String[] UserDatas={"-1","-1","-1"};
+    private String[] userData={"-1","-1","-1"};
     private RadioGroup rg;
     private RadioButton rb;
-    private String[] SendedDiseases;
+    private String[] userDiseases;
     private int radioid;
     private EditText edit;
     boolean Redwarning=false;
@@ -54,12 +54,12 @@ public class UserData extends AppCompatActivity {
         Countries.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                UserDatas[2]=cntrs[position];
+                userData[2]=cntrs[position];
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                UserDatas[2]="-1";
+                userData[2]="-1";
             }
         });
         edit=(EditText)findViewById(R.id.editText);
@@ -67,12 +67,12 @@ public class UserData extends AppCompatActivity {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
                 if (event.getAction()==KeyEvent.ACTION_DOWN && keyCode==KeyEvent.KEYCODE_ENTER){
-                    if(NotInteger(""+edit.getText()) || Integer.parseInt(""+edit.getText())>120) {
+                    if(NotInteger(""+edit.getText()) || Integer.parseInt(""+edit.getText())>110) {
                         edit.setText("");
-                        UserDatas[1]="-1";
+                        userData[1]="-1";
                     }
                     else
-                        UserDatas[1]=""+edit.getText();
+                        userData[1]=""+edit.getText();
                     return true;
                 }
                 return false;
@@ -82,36 +82,36 @@ public class UserData extends AppCompatActivity {
         Start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(NotInteger(""+edit.getText()) || Integer.parseInt(""+edit.getText())>120) {
+                if(NotInteger(""+edit.getText()) || Integer.parseInt(""+edit.getText())>110) {
                     edit.setText("");
-                    UserDatas[1]="-1";
+                    userData[1]="-1";
                 }
                 else
-                    UserDatas[1]=""+edit.getText();
+                    userData[1]=""+edit.getText();
                 radioid=rg.getCheckedRadioButtonId();
                 if (radioid!=-1) {
                     rb = (RadioButton) findViewById(radioid);
-                    UserDatas[0]=""+rb.getText();
+                    userData[0]=""+rb.getText();
                 }
                 else
-                    UserDatas[0]="-1";
+                    userData[0]="-1";
                 if(Diseases.getSelectedItems().size()>0){
-                    SendedDiseases=new String[Diseases.getSelectedItems().size()];
+                    userDiseases=new String[Diseases.getSelectedItems().size()];
                     for(int i=0;i<Diseases.getSelectedItems().size();i++)
-                        SendedDiseases[i]=Diseases.getSelectedItems().get(i).getName();
+                        userDiseases[i]=Diseases.getSelectedItems().get(i).getName();
 
                 }
                 else{
-                    SendedDiseases=new String[1];
-                    SendedDiseases[0]="None";
+                    userDiseases=new String[1];
+                    userDiseases[0]="None";
                 }
-                if(Start(UserDatas)) {
+                if(Start(userData)) {
                     if(Redwarning){
                         Redwarning=false;
                         txt = (TextView) findViewById(R.id.textView6);
                         txt.setVisibility(View.INVISIBLE);
                     }
-                    GotoActivity(Probabilities.class,UserDatas);
+                    GotoActivity(Probabilities.class,userData,userDiseases);
                     /** ΕΔΩ ΑΛΛΑΖΕΙΣ ACTIVITY ΚΑΙ ΣΤΕΛΝΕΙΣ ΤΟΝ ΠΙΝΑΚΑ UserDatas
                      * ΚΑΙ ΣΤΕΛΝΕΙΣ ΚΑΙ ΤΟ SendedDiseases*/
                 }
@@ -151,10 +151,11 @@ public class UserData extends AppCompatActivity {
         return true;
     }
 
-    public void GotoActivity(Class Activity,String[] userData){
+    public void GotoActivity(Class Activity,String[] userData,String[] userDiseases){
         Intent intent=new Intent(this,Activity);
         Bundle args = new Bundle();
         args.putSerializable("STRING",(Serializable)userData);
+        args.putSerializable("STRING DISEASES",(Serializable)userDiseases);
         intent.putExtra("BUNDLE",args);
         startActivity(intent);
     }

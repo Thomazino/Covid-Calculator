@@ -2,43 +2,69 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/darkbackground"
                 tools:context=".UserData">
 
 
     <Button
             android:id="@+id/button11"
-            android:layout_width="250sp"
-            android:layout_height="150sp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="450sp"
+            android:layout_width="215dp"
+            android:layout_height="110dp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
-            android:background="@drawable/questionsbackground"
+            android:background="@drawable/buttonbackground"
             android:text="Start"
             android:textSize="30sp"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true" android:layout_below="@+id/textView6"
+    />
 
     <com.example.helloapp.MultiSelectionSpinner
-            android:popupBackground="#000"
             android:background="@drawable/questionsbackground"
+            android:hint="None"
             android:id="@+id/spinner"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="255sp"
             android:layout_width="250sp"
-            android:layout_height="50sp"/>
+            android:fontFamily="@font/exo_2"
+            android:layout_height="40sp"
+            android:layout_alignParentTop="true" android:layout_marginTop="248dp"
+            android:popupBackground="#FF012039"/>
+
+    <ImageView
+            android:scaleY="0.5"
+            android:scaleX="0.5"
+            android:id="@+id/imageView"
+            android:layout_width="154dp"
+            android:layout_height="32dp"
+            app:srcCompat="@android:drawable/arrow_down_float"
+            android:translationY="3sp"
+            android:layout_alignTop="@+id/spinner"
+            android:layout_toRightOf="@+id/spinner" android:layout_alignParentRight="true"
+            android:translationX="-20sp"/>
 
     <Spinner
             android:background="@drawable/questionsbackground"
             android:id="@+id/spinner1"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="355sp"
             android:layout_width="250sp"
+            android:layout_height="40sp"
+            android:fontFamily="@font/exo_2"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="342dp"/>
 
-            android:layout_height="50sp" />
-
+    <ImageView
+            android:scaleY="0.5"
+            android:scaleX="0.5"
+            android:id="@+id/imageView1"
+            android:layout_width="154dp"
+            android:layout_height="32dp"
+            app:srcCompat="@android:drawable/arrow_down_float"
+            android:translationY="3sp"
+            android:layout_alignTop="@+id/spinner1"
+            android:layout_toRightOf="@+id/spinner1" android:layout_alignParentRight="true"
+            android:translationX="-20sp"/>
 
 
     <EditText
@@ -52,54 +78,65 @@
             android:maxEms="5"
             android:hint="ex. 25"
             android:background="@drawable/questionsbackground"
-            android:layout_marginTop="180sp"
             android:gravity="start|top"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
-            android:inputType="text|numberSigned" />
+            android:inputType="text|numberSigned"
+            android:layout_marginTop="173dp"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"/>
 
     <RadioGroup
             android:id="@+id/rd"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="30sp"
-            android:layout_width="130sp"
-            android:layout_height="120sp">
+            android:translationY="10sp"
+            android:layout_width="wrap_content"
+            android:layout_height="132dp"
+            android:soundEffectsEnabled="true"
+            android:layout_marginTop="10sp"
+            android:textAlignment="center">
 
         <RadioButton
                 android:id="@+id/radioButton2"
-                android:layout_width="100sp"
                 android:layout_height="100sp"
                 android:textColor="#fff"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:fontFamily="@font/exo_2"
-                android:text="Male" android:textColorLink="@color/colorPrimary"
-                android:textColorHint="@android:color/background_light"
-                android:textColorHighlight="@android:color/background_light"/>
+                android:text="Male"
+                android:textColorLink="@color/colorPrimary"
+                android:hapticFeedbackEnabled="true"
+                android:buttonTint="@android:color/background_light" android:layout_width="match_parent"/>
 
         <RadioButton
                 android:id="@+id/radioButton"
                 android:textColor="#fff"
-                android:layout_width="100sp"
+                android:layout_width="match_parent"
                 android:layout_height="40sp"
                 android:layout_marginTop="-30sp"
                 android:textSize="20sp"
                 android:textStyle="normal"
                 android:fontFamily="@font/exo_2"
-                android:text="Female"/>
+                android:hapticFeedbackEnabled="true"
+                android:text="Female"
+                android:buttonTint="@android:color/background_light"/>
     </RadioGroup>
 
     <TextView
             android:id="@+id/textView2"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
-            android:layout_height="100sp"
+            android:layout_height="wrap_content"
             android:textSize="20sp"
             android:textColor="#fff"
             android:textStyle="normal|bold"
-            android:fontFamily="@font/exo_2" android:visibility="visible"
-            android:text="Enter your sex:" android:textAlignment="center"
-            android:layout_marginTop="31dp"/>
+            android:fontFamily="@font/exo_2"
+            android:visibility="visible"
+            android:text="Enter your sex:"
+            android:textAlignment="center"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20sp"/>
 
     <TextView
             android:id="@+id/textView3"
@@ -111,72 +148,46 @@
             android:layout_marginTop="140sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
-            android:text="Enter your age (0-120):" android:visibility="visible" android:textAlignment="center"/>
+            android:text="Enter your age (0-110):"
+            android:visibility="visible"
+            android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/textView4"
-            android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
-            android:layout_height="100sp"
+            android:layout_height="94dp"
             android:textSize="20sp"
             android:textColor="#fff"
-            android:layout_marginTop="220sp"
+            android:layout_marginTop="213dp"
             android:textStyle="normal|bold"
-            android:fontFamily="@font/exo_2" android:visibility="visible"
-            android:text="Enter your chronic disease:" android:textAlignment="center"/>
+            android:fontFamily="@font/exo_2"
+            android:visibility="visible"
+            android:text="Enter your chronic disease:"
+            android:textAlignment="center" android:layout_alignParentStart="true" android:layout_alignParentTop="true"/>
 
     <TextView
             android:visibility="invisible"
             android:id="@+id/textView6"
-            android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
-            android:layout_height="100sp"
+            android:layout_height="35dp"
             android:textSize="14sp"
             android:textColor="#de2020"
             android:textAlignment="center"
-            android:layout_marginTop="430sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2"
-            android:text="*PLEASE fill out EVERYTHING correct*" />
-
-
-
-
+            android:text="*PLEASE fill out EVERYTHING correct*" android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView5"/>
     <TextView
             android:id="@+id/textView5"
-            android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:textAlignment="center"
-            android:layout_height="100sp"
+            android:layout_height="86dp"
             android:textSize="20sp"
             android:textColor="#fff"
-            android:layout_marginTop="325sp"
             android:textStyle="normal|bold"
             android:fontFamily="@font/exo_2" android:visibility="visible"
-            android:text="Enter your Country:" />
+            android:text="Enter your Country:" android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4" android:layout_marginTop="1dp"/>
 
-    <ImageView
-        android:scaleY="0.4"
-        android:scaleX="0.4"
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="30sp"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        android:layout_marginLeft="215sp"
-        android:layout_marginTop="265sp"
-
-        />
-
-    <ImageView
-        android:scaleY="0.4"
-        android:scaleX="0.4"
-        android:id="@+id/imageView1"
-        android:layout_width="match_parent"
-        android:layout_height="30sp"
-        app:srcCompat="@android:drawable/arrow_down_float"
-        android:layout_marginLeft="215sp"
-        android:layout_marginTop="365sp"
-
-        />
 
 </RelativeLayout>

@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/darkbackground"
-    tools:context=".Explaining">
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/darkbackground"
+                tools:context=".Explaining">
 
 
     <Button
-        android:id="@+id/button9"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:background="@drawable/buttonbackground"
-        android:fontFamily="@font/exo_2"
-        android:textStyle="normal|bold"
-        android:text="Go"
-        android:textColor="#ffffff"
-        android:textSize="12dp"
-        android:translationX="220dp"
-        android:translationY="137dp" android:layout_alignParentStart="true" android:layout_alignParentTop="true"
-        android:layout_marginTop="52dp"/>
-
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:translationY="130dp"
-        android:translationX="-100dp"
-        android:scaleX="0.8"
-        android:scaleY="0.8"
-        app:srcCompat="@drawable/doctor" android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:baselineAlignBottom="true"/>
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:translationX="65dp"
-        android:translationY="-65dp"
-        android:layout_width="312dp"
-        android:layout_height="451dp"
-        app:srcCompat="@drawable/speechcloud"
-        android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp" android:layout_marginTop="5dp"/>
-
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="198dp"
-        android:layout_height="133dp"
-        android:scrollbarStyle="insideInset"
-        android:fadeScrollbars="false"
-        android:scrollbarThumbVertical="@drawable/scrollview_thumb"
-        android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
-        android:translationX="160dp"
-        android:translationY="50dp">
-
-        <TextView
-            android:id="@+id/text1"
-            android:layout_width="165dp"
-            android:layout_height="70dp"
-            android:textColor="#000000"
+            android:id="@+id/button9"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:background="@drawable/buttonbackground"
             android:fontFamily="@font/exo_2"
             android:textStyle="normal|bold"
-            android:text="You can give me some information about you. Based on them I will calculate the probability of your death in case you get infected, probability your death is caused by serious pneumonia implications, how many people with similar charateristics with you were infected how many recovered, and how many are still dealing with the virus in your country and more..."
+            android:text="Go"
+            android:textColor="#ffffff"
             android:textSize="12dp"
-            android:translationX="13dp"
-            />
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="192dp" android:layout_alignParentEnd="true" android:layout_marginEnd="99dp"/>
+
+
+    <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationY="135sp"
+            android:translationX="-100dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/doctor" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:baselineAlignBottom="true"/>
+
+    <ImageView
+            android:id="@+id/imageView8"
+            android:translationY="-60sp"
+            android:layout_width="290dp"
+            android:layout_height="455dp"
+            app:srcCompat="@drawable/speechcloud"
+            android:layout_alignParentTop="true"
+            android:scaleX="0.9" android:layout_alignParentEnd="true"/>
+
+    <ScrollView
+            android:id="@+id/scrollView1"
+            android:layout_width="198dp"
+            android:layout_height="133dp"
+            android:scrollbarStyle="insideInset"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/scrollview_thumb"
+            android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
+            android:translationX="-40sp"
+            android:translationY="50dp" android:layout_alignParentEnd="true" android:layout_alignParentTop="true">
+
+        <TextView
+                android:id="@+id/text1"
+                android:layout_width="165dp"
+                android:layout_height="70dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/exo_2"
+                android:textStyle="normal|bold"
+                android:text="You can give me some information about you. Based on them I will calculate the probability of your death in case you get infected, probability your death is caused by serious pneumonia implications, how many people with similar charateristics with you were infected how many recovered, and how many are still dealing with the virus in your country and more..."
+                android:textSize="12dp"
+                android:translationX="13dp"
+        />
 
     </ScrollView>
 
 </RelativeLayout>
+
+

@@ -8,121 +8,99 @@
     tools:context=".Links">
 
 
-
-
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:translationY="130dp"
-        android:translationX="-100dp"
-        android:scaleX="0.8"
-        android:scaleY="0.8"
-        app:srcCompat="@drawable/doctor" />
+            android:id="@+id/imageView9"
+            android:layout_width="195dp"
+            android:layout_height="245dp"
+            app:srcCompat="@drawable/table"
+            android:scaleY="1.8"
+            android:scaleX="1"
+            android:layout_below="@+id/imageView8" android:layout_alignEnd="@+id/link1"/>
 
     <ImageView
             android:id="@+id/imageView8"
-            android:translationX="65dp"
-            android:translationY="-65dp"
-            android:layout_width="312dp"
-            android:layout_height="451dp"
+            android:layout_width="274dp"
+            android:layout_height="263dp"
             app:srcCompat="@drawable/speechcloud"
             android:scaleX="0.9"
-            android:scaleY="0.9"
-            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-            android:layout_marginStart="24dp" android:layout_marginTop="5dp"/>
-
-
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:translationX="89sp"
-        android:translationY="270sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleX="0.5"
-        app:srcCompat="@drawable/table" />
-
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" android:scaleY="0.9"/>
     <TextView
-            android:layout_width="165sp"
+            android:layout_width="190dp"
             android:layout_height="50sp"
             android:textColor="@android:color/background_light"
             android:text="Links"
             android:fontFamily="@font/exo_2"
             android:textStyle="normal|bold"
             android:textSize="30sp"
-            android:translationX="238sp"
-            android:translationY="273sp"
-            android:visibility="visible"/>
+            android:visibility="visible" android:layout_alignParentEnd="true"
+            android:layout_marginEnd="23dp" android:layout_alignTop="@+id/imageView9" android:id="@+id/linktext"
+            android:layout_centerHorizontal="true" android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/link1"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
+            android:layout_width="195dp"
+            android:layout_height="37dp"
             android:textColor="@android:color/background_light"
             android:fontFamily="@font/exo_2"
             android:text="@string/link1"
             android:textSize="14sp"
             android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="320sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+            android:visibility="visible" android:textColorLink="@color/colorPrimary"
+            android:layout_alignParentEnd="true" android:layout_marginEnd="21dp"
+            android:layout_below="@+id/linktext" android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/link2"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
+            android:layout_width="194dp"
+            android:layout_height="39dp"
             android:textColor="@android:color/background_light"
             android:fontFamily="@font/exo_2"
             android:text="@string/link2"
             android:textSize="14sp"
             android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="360sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+            android:visibility="visible" android:textColorLink="@color/colorPrimary" android:layout_below="@+id/link1"
+            android:layout_alignStart="@+id/link1" android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/link3"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
+            android:layout_width="190dp"
+            android:layout_height="37dp"
             android:textColor="@android:color/background_light"
             android:fontFamily="@font/exo_2"
             android:text="@string/link3"
             android:textSize="14sp"
             android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="405sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+            android:visibility="visible" android:textColorLink="@color/colorPrimary" android:layout_below="@+id/link2"
+            android:layout_alignStart="@+id/linktext" android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/link4"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
+            android:layout_width="192dp"
+            android:layout_height="51dp"
             android:textColor="@android:color/background_light"
             android:fontFamily="@font/exo_2"
             android:text="@string/link4"
             android:textSize="14sp"
             android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="450sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+            android:visibility="visible" android:textColorLink="@color/colorPrimary"
+            android:layout_below="@+id/link5" android:layout_alignParentEnd="true" android:layout_marginEnd="23dp"
+            android:layout_marginTop="-1dp" android:textAlignment="center"/>
 
     <TextView
             android:id="@+id/link5"
-            android:layout_width="165sp"
-            android:layout_height="50sp"
+            android:layout_width="191dp"
+            android:layout_height="38dp"
             android:textColor="@android:color/background_light"
             android:fontFamily="@font/exo_2"
             android:text="@string/link5"
             android:textSize="14sp"
             android:clickable="true"
-            android:translationX="190sp"
-            android:translationY="495sp"
-            android:visibility="visible" android:textColorLink="@color/colorPrimary"/>
+            android:visibility="visible" android:textColorLink="@color/colorPrimary" android:layout_below="@+id/link3"
+            android:layout_alignStart="@+id/linktext" android:textAlignment="center"/>
 
 
-
-        <TextView
+    <TextView
             android:id="@+id/text1"
             android:layout_width="175sp"
             android:layout_height="140sp"
@@ -131,10 +109,19 @@
             android:textStyle="normal|bold"
             android:text="If you are skeptical about my Covid-Stats research, you can tab and check the following links(first connect to Wi-Fi).This is where I collected my data and did the math work. They are reliable sources. "
             android:textSize="14sp"
-            android:translationY="55sp"
-            android:translationX="155sp"
 
-            />
+            android:layout_alignParentEnd="true" android:layout_alignParentTop="true" android:layout_marginEnd="46dp"
+            android:layout_marginTop="33dp"/>
+    <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:translationY="135dp"
+            android:translationX="-100dp"
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/doctor" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
 
 
 </RelativeLayout>

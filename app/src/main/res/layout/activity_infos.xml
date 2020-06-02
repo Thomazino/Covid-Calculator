@@ -8,21 +8,18 @@
                 tools:context=".Info">
 
 
-
-
     <Button
             android:id="@+id/button3"
             android:layout_width="167sp"
             android:layout_height="wrap_content"
-            android:translationX="190sp"
-            android:translationY="210sp"
             android:textSize="12sp"
             android:textColor="#ffffff"
             android:fontFamily="@font/exo_2"
             android:textStyle="normal|bold"
             android:background="@drawable/questionsbackground"
-            android:text="What is the source of the virus?" android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true" android:layout_marginTop="33dp"/>
+            android:text="What is the source of the virus?"
+            android:layout_alignBottom="@+id/imageView8"
+            android:layout_alignParentEnd="true" android:layout_marginEnd="19dp"/>
 
     <Button
             android:id="@+id/button4"
@@ -34,8 +31,8 @@
             android:text="How does the virus spread?"
             android:textColor="#ffffff"
             android:textSize="12sp"
-            android:translationX="190sp"
-            android:translationY="275sp" android:layout_alignParentStart="true" android:layout_alignTop="@+id/button3"/>
+            android:layout_alignStart="@+id/button3"
+            android:layout_centerVertical="true" android:layout_below="@+id/button3" android:layout_marginTop="10sp"/>
 
     <Button
             android:id="@+id/button5"
@@ -47,8 +44,9 @@
             android:text="What temperature kills COVID19?"
             android:textColor="#ffffff"
             android:textSize="12sp"
-            android:translationX="190sp"
-            android:translationY="340sp" android:layout_alignParentStart="true" android:layout_alignTop="@+id/button3"/>
+            android:layout_alignStart="@+id/button3"
+            android:layout_alignParentBottom="false" android:layout_marginTop="10sp"
+            android:layout_below="@+id/button4"/>
 
     <Button
             android:id="@+id/button6"
@@ -60,8 +58,9 @@
             android:text="How can I protect myself from the virus?"
             android:textColor="#ffffff"
             android:textSize="12sp"
-            android:translationX="190sp"
-            android:translationY="405sp" android:layout_alignParentStart="true" android:layout_alignTop="@+id/button3"/>
+            android:layout_alignParentBottom="false"
+            android:layout_alignStart="@+id/button3" android:layout_below="@+id/button5"
+            android:layout_marginTop="10sp"/>
 
     <Button
             android:id="@+id/button7"
@@ -73,8 +72,9 @@
             android:text="Should I be tested for COVID-19?"
             android:textColor="#ffffff"
             android:textSize="12sp"
-            android:translationX="190sp"
-            android:translationY="470sp" android:layout_alignParentStart="true" android:layout_alignTop="@+id/button3"/>
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/button6" android:layout_alignStart="@+id/button3"
+            android:layout_marginTop="10sp"/>
 
     <Button
             android:id="@+id/button8"
@@ -86,42 +86,39 @@
             android:text="What I have to do if I'm infected with the virus?"
             android:textColor="#ffffff"
             android:textSize="12sp"
-            android:translationX="190sp"
-            android:translationY="535sp" android:layout_alignParentStart="true" android:layout_alignTop="@+id/button3"/>
+            android:layout_alignStart="@+id/button3"
+            android:layout_marginTop="10sp" android:layout_below="@+id/button7"/>
 
 
     <ImageView
             android:id="@+id/imageView10"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:translationY="125sp"
+            android:layout_height="match_parent"
+            android:translationY="135sp"
             android:translationX="-100sp"
-            android:scaleX="0.8"
-            android:scaleY="0.8"
-            app:srcCompat="@drawable/doctor"/>
+            android:scaleX="0.9"
+            android:scaleY="0.9"
+            app:srcCompat="@drawable/doctor" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
 
     <ImageView
             android:id="@+id/imageView8"
-            android:translationX="55sp"
-            android:translationY="-85sp"
-            android:layout_width="312sp"
-            android:layout_height="451sp"
-            android:scaleX="0.9"
-            android:scaleY="0.9"
+            android:layout_width="318dp"
+            android:layout_height="250dp"
             app:srcCompat="@drawable/speechcloud"
-            android:layout_alignParentTop="true" android:layout_alignParentStart="true"
-            android:layout_marginStart="21sp"/>
+            android:layout_alignParentTop="true"
+            android:scaleX="0.9" android:layout_alignParentEnd="true" android:layout_marginTop="11dp"
+            android:translationX="10sp"/>
 
     <ScrollView
             android:id="@+id/scrollView1"
-            android:layout_width="218sp"
-            android:layout_height="155sp"
+            android:layout_width="194dp"
+            android:layout_height="168dp"
             android:scrollbarStyle="insideInset"
-            android:fadeScrollbars="false"
             android:scrollbarThumbVertical="@drawable/scrollview_thumb"
             android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
-            android:translationX="160sp"
-            android:translationY="30sp">
+            android:layout_alignParentEnd="true" android:layout_marginEnd="40dp" android:layout_marginTop="20sp"
+    >
 
         <TextView
                 android:id="@+id/text1"
@@ -132,6 +129,8 @@
                 android:textStyle="normal|bold"
                 android:text="Hello there. I'm the smartest AI chatbot in the universe. Feel free to ask me whatever questions you want from the following ones. My knowledge will save you from Coronavirus."
                 android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_alignParentTop="true"
         />
 
     </ScrollView>
