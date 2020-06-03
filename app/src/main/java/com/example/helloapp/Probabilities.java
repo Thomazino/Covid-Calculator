@@ -211,8 +211,18 @@ public class Probabilities extends AppCompatActivity {
         float covidVSinfluenza = getCovidVSInfluenza(ageCovidDeaths, ageInfluenzaDeaths, countryRelativeToData);
 
         txt = (TextView) findViewById(R.id.textView);
+
+
+
         String text1 = "So you are a " + userAge + " year old " + userSex + " from " + userCountry;
         if (userDiseases != null) {
+            if( ( userDiseases[0].equals("Chronic respiratory disease") || userDiseases[0].equals("Cardiovascular disease") || userDiseases[0].equals("Hypertension") )&& userDiseases.length==1){
+                txt.setTextSize(17);
+            }
+            else if( (userDiseases.length>1 && userDiseases.length<=3) || !userDiseases[0].equals("Cardiovascular disease"))
+                txt.setTextSize(15);
+            else
+                txt.setTextSize(13);
             text1 += (" with " + userDiseases[0]);
             for(int i=1;i<userDiseases.length;i++) {
                 if (i==userDiseases.length-1) text1+=(" and "+userDiseases[i]);

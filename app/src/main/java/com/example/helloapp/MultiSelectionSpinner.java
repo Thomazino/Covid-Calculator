@@ -1,5 +1,6 @@
 package com.example.helloapp;
 
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
@@ -49,13 +50,11 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
     public boolean performClick() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         String[] itemNames = new String[items.size()];
-
         for (int i = 0; i < items.size(); i++) {
             itemNames[i] = items.get(i).getName();
         }
 
         builder.setMultiChoiceItems(itemNames, selection, this);
-
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface arg0, int arg1)

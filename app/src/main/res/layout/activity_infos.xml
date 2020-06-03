@@ -19,7 +19,7 @@
             android:background="@drawable/questionsbackground"
             android:text="What is the source of the virus?"
             android:layout_alignBottom="@+id/imageView8"
-            android:layout_alignParentEnd="true" android:layout_marginEnd="19dp"/>
+            android:layout_alignParentEnd="true" android:layout_marginEnd="3dp"/>
 
     <Button
             android:id="@+id/button4"
@@ -108,7 +108,7 @@
             app:srcCompat="@drawable/speechcloud"
             android:layout_alignParentTop="true"
             android:scaleX="0.9" android:layout_alignParentEnd="true" android:layout_marginTop="11dp"
-            android:translationX="10sp"/>
+            android:translationX="-11sp"/>
 
     <ScrollView
             android:id="@+id/scrollView1"
@@ -117,7 +117,7 @@
             android:scrollbarStyle="insideInset"
             android:scrollbarThumbVertical="@drawable/scrollview_thumb"
             android:scrollbarTrackVertical="@drawable/vertical_scrollview_traack"
-            android:layout_alignParentEnd="true" android:layout_marginEnd="40dp" android:layout_marginTop="20sp"
+            android:layout_alignParentEnd="true" android:layout_marginEnd="58dp" android:layout_marginTop="20sp"
     >
 
         <TextView
