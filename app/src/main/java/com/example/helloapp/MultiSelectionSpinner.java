@@ -82,22 +82,7 @@ public class MultiSelectionSpinner extends android.support.v7.widget.AppCompatSp
         Arrays.fill(selection, false);
     }
 
-    public void setSelection(ArrayList<Item> selection) {
-        for (int i = 0; i < this.selection.length; i++) {
-            this.selection[i] = false;
-        }
 
-        for (Item sel : selection) {
-            for (int j = 0; j < items.size(); ++j) {
-                if (items.get(j).getValue()==(sel.getValue())) {
-                    this.selection[j] = true;
-                }
-            }
-        }
-
-        adapter.clear();
-        adapter.add(buildSelectedItemString());
-    }
 
     private String buildSelectedItemString() {
         StringBuilder sb = new StringBuilder();

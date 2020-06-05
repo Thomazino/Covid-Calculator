@@ -30,6 +30,7 @@ public class DatabaseAccess {
             this.db.close();
     }
 
+      //επιστρεφει ολες τις πληροφοριες μιας χωρας που εχουμε στην βαση
     public String[] getInfoForCountry(String name){
         String[] Infos=new String[7];
         c=db.rawQuery("SELECT * FROM Countries WHERE Country='"+name+"'",new String[]{});
@@ -47,7 +48,8 @@ public class DatabaseAccess {
 
         return Infos;
     }
-
+    //επιστρεφει ενα αθροιστικο deathrate με βαση του ποσες ασθενειες στελνουμε για να βγει
+    // μια αυξημενη πιθανοτητα θανατου αναλογα με το πληθος των ασθενειων στο τελος
     public float getDeathRateDisease(String[] diseases,float userAge){
         float userDiseaseDeathRate=0;
         for (int i=0;i<diseases.length;i++) {
@@ -59,7 +61,7 @@ public class DatabaseAccess {
         }
         return userDiseaseDeathRate;
     }
-
+//επιστρεφει εναν πινακα 2d με δεδομενα αναλογα την ηλικια και το φυλο μεσα απο την βαση
     public String[][] CasesData(int Age,String Sex){
         String[][] Datas=new String[54][6];
         String age;
@@ -118,7 +120,7 @@ public class DatabaseAccess {
         }
         return Datas;
     }
-
+//επιστρεφει δεδομενα αναλογα το φυλο οποτε αποκταται απλα μια γενικη εικονα για το φυλο που σταλθηκε ως ορισμα
     public String[][] GeneralCasesOnSexesData(String sex){
         String[][] Datas=new String[54][6];
         c=db.rawQuery("SELECT * FROM CasesMeasurements WHERE Sex='"+sex+" Total'",new String[]{});
@@ -136,7 +138,7 @@ public class DatabaseAccess {
         return Datas;
     }
 
-
+    //επιστρεφει ολες τις χωρες που υπαρχουν στην βαση
     public String[] getCountries(){
         String[] Countries=new String[177];
         c=db.rawQuery("SELECT Country FROM Countries",new String[]{});
@@ -148,14 +150,14 @@ public class DatabaseAccess {
         }
         return Countries;
     }
-
+   //επιστρεφει το αθροισμα των παθοντων του κορονοιου απο ολες τις χωρες
     public String getTotalCases(){
         c = db.rawQuery("SELECT SUM(Total_Cases) FROM Countries",new String[]{});
         c.moveToNext();
         return c.getString(0);
 
     }
-
+    //επιστρεφει το αθροισμα των νεκρων του κορονοιου απο ολες τις χωρες
     public String getTotalDeaths(){
         c = db.rawQuery("SELECT SUM(Total_Deaths)FROM Countries",new String[]{});
         c.moveToNext();

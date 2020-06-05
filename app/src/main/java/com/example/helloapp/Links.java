@@ -11,6 +11,8 @@ public class Links extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_links);
+        //ενωση καθε textview με το σωστο λινκ ωστε να μπορει να επισκεφτει ο χρηστης τους ιστοχωρους
+        //που δημιουργηθηκε η βαση
         TextView link1=(TextView)findViewById(R.id.link1);
         link1.setMovementMethod(LinkMovementMethod.getInstance());
         TextView link2=(TextView)findViewById(R.id.link2);

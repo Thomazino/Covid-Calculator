@@ -1,5 +1,6 @@
 package com.example.helloapp;
-
+//βοηθητικη κλαση item για το MultiSelection Spinner που αντιπροσωπευει μια απο τις πολλες επιλογες που μπορει
+//να εχει
 public class Item {
     private String name;
     private int value;
